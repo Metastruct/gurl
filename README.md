@@ -36,3 +36,4 @@ Make client IPs private again by whitelisting URLs that do not leak IPs.
 
 If you believe something should or should not be in this list, make a pull request using the above link.
  
+Coders: Help us code this thing and refine the system to better suit all external content features, either through pull requets or suggestions/issues

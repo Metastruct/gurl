@@ -30,6 +30,9 @@ Make client IPs private again by whitelisting URLs that do not leak IPs.
       - ```gurl/http . AskOpen("url",function(ok)  end)```
       
       
-### URLs
+### HELP US
 
- - 
+[Help us make the  whitelist rules for all relatively safe services](https://github.com/Metastruct/gurl/edit/master/url_whitelist.lua)
+
+If you believe something should or should not be in this list, make a pull request using the above link.
+ 

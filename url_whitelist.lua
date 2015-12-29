@@ -123,4 +123,9 @@ simple [[a.pomf.cat/]]
 
 simple [[hastebin.com/]]
 
+-- puush
+--- Examples:
+---  http://puu.sh/asd/qwe.obj
+simple [["puu.sh/"]]
+
 return list

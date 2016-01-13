@@ -2,12 +2,16 @@ local list = {}
 
 local TYPE_SIMPLE=1
 local TYPE_PATTERN=2
+local TYPE_BLACKLIST=3
 
 local function pattern(pattern)
   list[#list+1]={TYPE_PATTERN,pattern}
 end
 local function simple(txt)
   list[#list+1]={TYPE_SIMPLE,txt}
+end
+local function blacklist(txt)
+  list[#list+1]={TYPE_BLACKLIST,txt}
 end
 
 
@@ -19,6 +23,7 @@ end
 
 simple [[www.dropbox.com/s/]]
 simple [[https://dl.dropboxusercontent.com/]]
+simple [[dl.dropbox.com/] --Sometimes redirects to usercontent link
 
 -- OneDrive
 --- Examples: 
@@ -109,12 +114,14 @@ simple [[a.pomf.cat/]]
 
 -- TinyPic
 --- Examples: 
----  
+---  http://i68.tinypic.com/24b3was.gif
+pattern [[i(.+)%.tinypic%.com/]]
 
 
 -- paste.ee
 --- Examples: 
----  
+---  https://paste.ee/r/J3jle
+simple [[paste.ee/]]
 
 
 -- hastebin
@@ -126,6 +133,16 @@ simple [[hastebin.com/]]
 -- puush
 --- Examples:
 ---  http://puu.sh/asd/qwe.obj
-simple [["puu.sh/"]]
+simple [[puu.sh/]]
+
+-- Steam
+--- Examples:
+---  http://images.akamai.steamusercontent.com/ugc/367407720941694853/74457889F41A19BD66800C71663E9077FA440664/
+---  https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/4000/dca12980667e32ab072d79f5dbe91884056a03a2.jpg
+simple [[images.akamai.steamusercontent.com/]]
+simple [[steamcdn-a.akamaihd.net/]]
+simple [[steamcommunity.com/]]
+simple [[store.steampowered.com/]]
+blacklist [[steamcommunity.com/linkfilter/]]
 
 return list

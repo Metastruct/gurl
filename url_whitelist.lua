@@ -140,6 +140,7 @@ simple [[puu.sh/]]
 ---  http://images.akamai.steamusercontent.com/ugc/367407720941694853/74457889F41A19BD66800C71663E9077FA440664/
 ---  https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/4000/dca12980667e32ab072d79f5dbe91884056a03a2.jpg
 simple [[images.akamai.steamusercontent.com/]]
+simple [[images.steamusercontent.com/]]
 simple [[steamcdn-a.akamaihd.net/]]
 simple [[steamcommunity.com/]]
 simple [[store.steampowered.com/]]

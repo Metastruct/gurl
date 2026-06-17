@@ -12,7 +12,7 @@ concommand.Add("gurl_test", function(_, _, args)
   else
     print("gurl_test: " .. args[1] .. " -> BLOCKED (" .. reason .. ")")
   end
-end, "Tests if a URL is allowed by the gurl whitelist")
+end, nil, "Tests if a URL is allowed by the gurl whitelist")
 
 concommand.Add("gurl_dump", function()
   local tbl = _G.gurl.GetTable()
@@ -27,7 +27,7 @@ concommand.Add("gurl_dump", function()
   local json = util.TableToJSON(tbl, true)
   file.Write("gurl.json", json)
   MsgC(Color(200, 200, 255), "Dumped to gurl.json\n")
-end, "Dumps all whitelist and blacklist patterns")
+end, nil, "Dumps all whitelist and blacklist patterns")
 
 concommand.Add("gurl_allow", function(_, _, args)
   if not args[1] then
@@ -38,4 +38,4 @@ concommand.Add("gurl_allow", function(_, _, args)
   domain = string.match(domain, "^([^/]+)") or domain
   _G.gurl.add_simple(domain)
   print("gurl: allowed " .. domain)
-end, "Adds a simple domain whitelist entry (strips protocol/path)")
+end, nil, "Adds a simple domain whitelist entry (strips protocol/path)")

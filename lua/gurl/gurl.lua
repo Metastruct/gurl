@@ -28,6 +28,7 @@ end
 ---@param url string
 ---@return string
 function _M.make_downloadable(url)
+  -- Also maintained in https://raw.githubusercontent.com/CapsAdmin/pac3/refs/heads/develop/lua/pac3/core/shared/http.lua
   url = url:Trim()
   url = url:gsub("[\"'<>\n\\]+", "")
 

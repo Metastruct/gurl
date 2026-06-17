@@ -1,3 +1,7 @@
+if SERVER then AddCSLuaFile() end
+-- Maintained in https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/starfall_whitelist_default.lua
+-- Maintained as shared/standalone in https://github.com/Metastruct/gurl
+
 local list = {}
 
 local TYPE_SIMPLE=1
@@ -13,11 +17,6 @@ end
 local function blacklist(txt)
   list[#list+1]={TYPE_BLACKLIST,txt}
 end
-
-
------------------------------------------
--- https://github.com/Metastruct/gurl/ --
------------------------------------------
 
 -- Dropbox
 --- Examples:

@@ -1,0 +1,22 @@
+{
+  "name": "gurl",
+  "version": "1.0.0",
+  "description": "gurl",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Metastruct/gurl.git"
+  },
+  "keywords": [
+    "gmod",
+    "garrysmod"
+  ],
+  "files": ["lua"],
+  "author": "Metastruct",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/Metastruct/gurl/issues"
+  },
+  "homepage": "https://github.com/Metastruct/gurl",
+  "dependencies": {
+  }
+}

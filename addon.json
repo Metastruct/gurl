@@ -1,0 +1,17 @@
+{
+	"title"		:	"GUrl: URL Whitelist",
+	"type"		:	"tool",
+	"tags"		:	[ ],
+	"ignore"	:
+	[
+		"*.zip",
+		"*.sh",
+		"*.yml",
+		"*ds_store*",
+		".git*",
+		"*.json",
+		"*.md",
+		".gitignore",
+		"*.gma"
+	]
+}

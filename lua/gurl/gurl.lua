@@ -23,7 +23,13 @@ for _, entry in ipairs(entries) do
   end
 end
 
-
+local sv_downloadurl = GetConVar("sv_downloadurl"):GetString()
+if sv_downloadurl ~= "" then
+  local host = string.match(sv_downloadurl, "^%w-://([^/]+)")
+  if host then
+    whitelistPatterns[#whitelistPatterns + 1] = "^" .. string.PatternSafe(host) .. "/.*"
+  end
+end
 
 ---@param url string
 ---@return string
@@ -90,7 +96,12 @@ function _M.check_url_easy(url)
         _M.blocked_urls[#_M.blocked_urls] = nil
       end
     end
-    chat.AddText(Color(255, 100, 100), "[gurl] Blocked: ", url, "  |  allow with: gurl_allow <domain>")
+    local domain = (string.match(url, "^%w-://(.+)") or url):match("^([^/]+)")
+    if domain then
+      chat.AddText(Color(255, 100, 100), "[gurl] Blocked: ", url, "  |  allow with: gurl_allow ", Color(255, 200, 100), domain)
+    else
+      chat.AddText(Color(255, 100, 100), "[gurl] Blocked: ", url)
+    end
   end
   return ok, reason
 end

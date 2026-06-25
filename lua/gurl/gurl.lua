@@ -1,8 +1,8 @@
 AddCSLuaFile()
-
+local TYPE_SIMPLE = 1
 local _M = {
-  TYPE_SIMPLE = 1,
-  TYPE_PATTERN = 2,
+  TYPE_SIMPLE = TYPE_SIMPLE,
+  TYPE_PATTERN = 2, --TODO rest of these
   TYPE_BLACKLIST = 3,
 }
 _M.blocked_urls = _G.gurl and _G.gurl.blocked_urls or {}
@@ -14,21 +14,20 @@ local gurl_print_blocked = CreateConVar("gurl_print_blocked", "0", {FCVAR_ARCHIV
 local entries = include("gurl/url_whitelist.lua")
 for _, entry in ipairs(entries) do
   local typ, txt = entry[1], entry[2]
-  if typ == 1 then
+  if typ == TYPE_SIMPLE then
     whitelistPatterns[#whitelistPatterns + 1] = "^" .. string.PatternSafe(txt) .. "/.*"
-  elseif typ == 2 then
+  elseif typ == 2 then --TODO rest of these
     whitelistPatterns[#whitelistPatterns + 1] = "^" .. txt .. "$"
-  elseif typ == 3 then
-    blacklistPatterns[#blacklistPatterns + 1] = "^" .. string.PatternSafe(txt) .. ".*"
+  elseif typ == 3 then 
+    blacklistPatterns[#blacklistPatterns + 1] = "^" .. string.PatternSafe(txt) .. ".*" -- TODO: make these into functions
   end
 end
 
-local sv_downloadurl = GetConVar("sv_downloadurl"):GetString()
-if sv_downloadurl ~= "" then
-  local host = string.match(sv_downloadurl, "^%w-://([^/]+)")
-  if host then
-    whitelistPatterns[#whitelistPatterns + 1] = "^" .. string.PatternSafe(host) .. "/.*"
-  end
+local sv_downloadurl = GetConVar("sv_downloadurl")
+
+local host = (sv_downloadurl:GetString() or ""):match( "^%w-://([^/]+)")
+if host then
+  whitelistPatterns[#whitelistPatterns + 1] = "^" .. string.PatternSafe(host) .. "/.*"
 end
 
 ---@param url string

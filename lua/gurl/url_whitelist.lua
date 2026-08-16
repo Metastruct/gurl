@@ -80,11 +80,6 @@ simple [[cloud.githubusercontent.com]]
 simple [[user-images.githubusercontent.com]]
 pattern [[avatars(%d*)%.githubusercontent%.com/(.+)]]
 
--- TinyPic
---- Examples:
----  http://i68.tinypic.com/24b3was.gif
-pattern [[i([%w-_]+)%.tinypic%.com/(.+)]]
-
 -- paste.ee
 --- Examples:
 ---  https://paste.ee/r/J3jle
@@ -161,6 +156,7 @@ pattern [[([%w-_]+)%.wixmp%.com/(.+)]]
 --- Examples:
 --- https://ipfs.io/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/I/m/Ellis_Sigil.jpg
 simple [[ipfs.io]]
+simple [[dweb.link]]
 
 -- neocities
 --- Examples:
@@ -238,6 +234,7 @@ simple [[cdn.statically.io]]
 --- Examples:
 ---  https://placehold.co/600x400/png
 simple [[placehold.co]]
+simple [[external-content.duckduckgo.com]]
 simple [[pbs.twimg.com]]
 simple [[images4.imagebam.com]]
 simple [[images2.imgbox.com]]

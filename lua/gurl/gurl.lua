@@ -1,9 +1,11 @@
 AddCSLuaFile()
 local TYPE_SIMPLE = 1
+local TYPE_PATTERN = 2
+local TYPE_BLACKLIST = 3
 local _M = {
   TYPE_SIMPLE = TYPE_SIMPLE,
-  TYPE_PATTERN = 2, --TODO rest of these
-  TYPE_BLACKLIST = 3,
+  TYPE_PATTERN = TYPE_PATTERN,
+  TYPE_BLACKLIST = TYPE_BLACKLIST,
 }
 _M.blocked_urls = _G.gurl and _G.gurl.blocked_urls or {}
 
@@ -16,10 +18,10 @@ for _, entry in ipairs(entries) do
   local typ, txt = entry[1], entry[2]
   if typ == TYPE_SIMPLE then
     whitelistPatterns[#whitelistPatterns + 1] = "^" .. string.PatternSafe(txt) .. "/.*"
-  elseif typ == 2 then --TODO rest of these
+  elseif typ == TYPE_PATTERN then
     whitelistPatterns[#whitelistPatterns + 1] = "^" .. txt .. "$"
-  elseif typ == 3 then 
-    blacklistPatterns[#blacklistPatterns + 1] = "^" .. string.PatternSafe(txt) .. ".*" -- TODO: make these into functions
+  elseif typ == TYPE_BLACKLIST then
+    blacklistPatterns[#blacklistPatterns + 1] = "^" .. string.PatternSafe(txt) .. ".*"
   end
 end
 

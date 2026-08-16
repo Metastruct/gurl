@@ -234,4 +234,19 @@ simple [[rawcdn.githack.com]]
 --- https://cdn.statically.io/img/statically.dev/w=300,h=500/cat.jpg
 simple [[cdn.statically.io]]
 
+-- placehold.co
+--- Examples:
+---  https://placehold.co/600x400/png
+simple [[placehold.co]]
+simple [[pbs.twimg.com]]
+simple [[images4.imagebam.com]]
+simple [[images2.imgbox.com]]
+simple [[i.ibb.co]]
+simple [[i.postimg.cc]]
+pattern [[([%w-_%.]+)%.disbridge%.com/(.+)]]
+pattern [[([%w-_%.]+)%.github%.io/(.+)]]
+pattern [[([%w-_%.]+)%.ttvnw%.net/(.+)]]
+pattern [[([%w-_%.]+)%.vrcdn%.cloud/(.+)]]
+pattern [[([%w-_%.]+)%.vrcdn%.live/(.+)]]
+
 return list

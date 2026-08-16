@@ -27,7 +27,7 @@ local sv_downloadurl = GetConVar("sv_downloadurl")
 
 local host = (sv_downloadurl:GetString() or ""):match( "^%w-://([^/]+)")
 if host then
-  whitelistPatterns[#whitelistPatterns + 1] = "^" .. string.PatternSafe(host) .. "/.*"
+  whitelistPatterns[#whitelistPatterns + 1] = "^" .. string.PatternSafe(host:lower()) .. "/.*"
 end
 
 ---@param url string
@@ -138,7 +138,7 @@ function _M.check_url(url)
     if gurl_print_blocked:GetBool() then Msg("[GURL Whitelist] Blocked ") print(url) end
     return false, "malformed url"
   end
-  site = site .. "/" .. (data or "")
+  site = site:lower() .. "/" .. (data or "")
 
   for _, pat in ipairs(blacklistPatterns) do
     if string.match(site, pat) then

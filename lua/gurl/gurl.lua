@@ -1,4 +1,7 @@
-AddCSLuaFile()
+-- GMod URL whitelist and rewriter
+
+if SERVER then AddCSLuaFile() end
+
 local TYPE_SIMPLE = 1
 local TYPE_PATTERN = 2
 local TYPE_BLACKLIST = 3

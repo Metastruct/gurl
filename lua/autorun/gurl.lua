@@ -1,7 +1,13 @@
-AddCSLuaFile()
+-- GMod URL whitelist and rewriter
+
+if SERVER then AddCSLuaFile() end
+
 _G.gurl = include("gurl/gurl.lua")
 
-concommand.Add("gurl_test", function(_, _, args)
+concommand.Add("gurl_test", function(pl, _, args)
+
+  if SERVER and pl:IsValid() and not pl:IsSuperAdmin() then return end
+
   if not args[1] then
     print("usage: gurl_test <url>")
     return
@@ -14,7 +20,10 @@ concommand.Add("gurl_test", function(_, _, args)
   end
 end, nil, "Tests if a URL is allowed by the gurl whitelist")
 
-concommand.Add("gurl_dump", function()
+concommand.Add("gurl_dump", function(pl)
+
+  if SERVER and pl:IsValid() and not pl:IsSuperAdmin() then return end
+
   local tbl = _G.gurl.GetTable()
   MsgC(Color(255, 200, 100), "--- gurl whitelist ---\n")
   for _, pat in ipairs(tbl.whitelist) do
@@ -29,7 +38,10 @@ concommand.Add("gurl_dump", function()
   MsgC(Color(200, 200, 255), "Dumped to gurl.json\n")
 end, nil, "Dumps all whitelist and blacklist patterns")
 
-concommand.Add("gurl_allow", function(_, _, args)
+concommand.Add("gurl_allow", function(pl, _, args)
+
+  if SERVER and pl:IsValid() and not pl:IsSuperAdmin() then return end
+
   if not args[1] then
     print("usage: gurl_allow <domain or url>")
     return

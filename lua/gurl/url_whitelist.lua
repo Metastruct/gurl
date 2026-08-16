@@ -1,4 +1,5 @@
 if SERVER then AddCSLuaFile() end
+
 -- Maintained in https://github.com/thegrb93/StarfallEx/blob/master/lua/starfall/starfall_whitelist_default.lua
 -- Maintained as shared/standalone in https://github.com/Metastruct/gurl
 

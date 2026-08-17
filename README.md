@@ -6,9 +6,9 @@ URL checker library for semi-trusted services that do not leak IPs (directly at 
 
 ## Embedding in your addon
 
-GUrl can work as a standalone addon or as git submodule.
+We recommend using GUrl via workshop dependency so the allowlist stays updated: https://steamcommunity.com/sharedfiles/filedetails/?id=3785250070
 
-We recommend using it via workshop dependency so the allowlist stays updated: https://steamcommunity.com/sharedfiles/filedetails/?id=3785250070
+GUrl can also work as a standalone addon or as git submodule.
 
 ### Git submodule
 

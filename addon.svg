@@ -17,8 +17,8 @@
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
    sodipodi:docname="addon.svg"
    inkscape:export-filename="\\o3050w.local\pi\.steam\debian-installation\steamapps\common\GarrysMod\bin\linux64\gurl\addon.png"
-   inkscape:export-xdpi="96"
-   inkscape:export-ydpi="96">
+   inkscape:export-xdpi="95.5"
+   inkscape:export-ydpi="95.5">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -28,19 +28,21 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="304.87037"
-     inkscape:cy="256.00269"
+     inkscape:zoom="1"
+     inkscape:cx="474.00631"
+     inkscape:cy="53.486816"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
-     showgrid="true"
+     showgrid="false"
      units="px"
-     showguides="false"
+     showguides="true"
      inkscape:window-width="1920"
      inkscape:window-height="1147"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
-     inkscape:window-maximized="1">
+     inkscape:window-maximized="1"
+     inkscape:snap-grids="false"
+     inkscape:snap-page="true">
     <inkscape:grid
        type="xygrid"
        id="grid819" />
@@ -65,8 +67,8 @@
     <rect
        style="opacity:1;vector-effect:none;fill:#f9f9f9;fill-opacity:1;stroke:none;stroke-width:8.46666622;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.93367345;paint-order:fill markers stroke"
        id="rect825"
-       width="136.26042"
-       height="135.46666"
+       width="135.46666"
+       height="135.46667"
        x="0"
        y="161.53333"
        rx="0"
@@ -74,15 +76,15 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="4.1644287"
+       x="66.88446"
        y="186.33733"
        id="text817"><tspan
          sodipodi:role="line"
          id="tspan815"
-         x="4.1644287"
+         x="66.88446"
          y="186.33733"
-         style="font-size:19.75555611px;stroke-width:0.26458332"><tspan
-   style="fill:#666666"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.75555611px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.26458332"><tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.75555611px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#666666"
    id="tspan4574">https://</tspan>GURL</tspan></text>
     <g
        id="g4539"
@@ -113,13 +115,13 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="18.868101"
+       x="67.760895"
        y="278.31979"
        id="text817-6"><tspan
          sodipodi:role="line"
-         x="18.868101"
+         x="67.760895"
          y="278.31979"
-         style="font-size:14.11111069px;stroke-width:0.26458332"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.26458332"
          id="tspan4582">URL Checking</tspan></text>
   </g>
 </svg>

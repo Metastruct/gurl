@@ -1,17 +1,14 @@
-GUrl
+GUrl: URL Checking
 ==========
 
-Whitelist checker for semi-trusted services that do not leak IPs (directly at least).
+URL checker library for semi-trusted services that do not leak IPs (directly at least).
 
 
 ## Embedding in your addon
 
-Gurl can work as a standalone addon or as git submodule.
+GUrl can work as a standalone addon or as git submodule.
 
-
-### Workshop dependency
-
-Add [this](https://steamcommunity.com/sharedfiles/filedetails/?id=882463775) as a dependency in your workshop addon.
+We recommend using it via workshop dependency so the allowlist stays updated: https://steamcommunity.com/sharedfiles/filedetails/?id=3785250070
 
 ### Git submodule
 

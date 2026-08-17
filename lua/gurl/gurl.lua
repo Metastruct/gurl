@@ -16,7 +16,7 @@ local whitelistPatterns = {}
 local blacklistPatterns = {}
 local gurl_print_blocked = CreateConVar("gurl_print_blocked", "0", {FCVAR_ARCHIVE}, "If enabled, prints blocked URLs to console")
 
-local entries = include("gurl/url_whitelist.lua")
+local entries = include("url_whitelist.lua")
 for _, entry in ipairs(entries) do
   local typ, txt = entry[1], entry[2]
   if typ == TYPE_SIMPLE then

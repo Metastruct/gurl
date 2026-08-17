@@ -2,6 +2,8 @@ GUrl: URL Checking
 ==========
 
 URL checker library for semi-trusted services that do not leak IPs (directly at least).
+![logoneededforworkshop](addon.svg)
+
 
 
 ## Embedding in your addon
